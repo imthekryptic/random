@@ -18,3 +18,4 @@ if choice == 1:
                 intNum -= bitValue
     print("Binary:", end=" ")
     print(*bitArray, sep="")
+test
