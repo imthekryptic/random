@@ -1,20 +1,48 @@
-choice = int(input("Convert denary to binary (1)\nConvert binary to denary (2)\n"))
-if choice == 1:
+def DenaryToBinary(intNum): # Negative values all use sign and magnitude
     bitValue = 1
     bit = 1
     bitArray = [0] * 32
-    intNum = int(input("Enter number: "))
+    if intNum < 0:
+        intNum *= -1
+        bitArray[0] = 1
     while intNum != 0:
         bitValue *= 2
         bit += 1
         if bitValue > intNum:
             bitValue //= 2
             bit -= 1
-            if bit > 32:
-                print("Error, number is too large")
-                break
+            if bit > 31: # Leaving first bit for sign
+                print("Error, number is too large\n")
+                return
             else:
                 bitArray[32 - bit] = 1
                 intNum -= bitValue
+                bitValue = 1
+                bit = 1
     print("Binary:", end=" ")
-    print(*bitArray, sep="")
+    print(*bitArray, sep="") # Iterable objects can be unpacked with the * operator
+    print()
+
+def BinaryToDenary(bitNum):
+    intNum = 0
+    for digit in bitNum:
+        if digit != "1" and digit != "0":
+            print("Error, invalid input\n")
+            return
+        intNum = intNum * 2 + int(digit)
+    print(f"Denary: {intNum}\n")
+
+while True:
+    choice = int(input("Convert denary to binary (1)\nConvert binary to denary (2)\n"))
+    if choice == 1:
+        try:
+            number = int(input("Enter number: "))
+            DenaryToBinary(number)
+        except ValueError and UnboundLocalError:
+            print("Error, invalid input\n")
+    if choice == 2:
+        try:
+            number = input("Enter number: ")
+            BinaryToDenary(number)
+        except ValueError and UnboundLocalError:
+            print("Error, invalid input\n")
