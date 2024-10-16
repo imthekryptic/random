@@ -33,16 +33,13 @@ def BinaryToDenary(bitNum):
     print(f"Denary: {intNum}\n")
 
 while True:
-    choice = int(input("Convert denary to binary (1)\nConvert binary to denary (2)\n"))
-    if choice == 1:
-        try:
+    try:
+        choice = int(input("Convert denary to binary (1)\nConvert binary to denary (2)\n"))
+        if choice == 1:
             number = int(input("Enter number: "))
             DenaryToBinary(number)
-        except ValueError and UnboundLocalError:
-            print("Error, invalid input\n")
-    if choice == 2:
-        try:
+        if choice == 2:
             number = input("Enter number: ")
             BinaryToDenary(number)
-        except ValueError and UnboundLocalError:
-            print("Error, invalid input\n")
+    except ValueError or UnboundLocalError:
+        print("Error, invalid input\n")
