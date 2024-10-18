@@ -16,6 +16,9 @@ def ConvertCustom(num, inputBase, outputBase):
     num = int(num, inputBase) # Converting to base 10 before converting to inputted base
     if not num:
         return print(0)
+    elif num < 0:
+        negative = True
+        num *= -1
     digits = []
     while num:
         if num % outputBase >= 10:
@@ -76,7 +79,10 @@ def ConvertCustom(num, inputBase, outputBase):
         num //= outputBase
     digits = list(reversed(digits))
     string = "".join(str(digit) for digit in digits) # Converts each element to string
-    return print(string.upper())
+    if negative:
+        return print("-"+string.upper())
+    else:
+        return print(string.upper())
 
 while True:
     try:
