@@ -10,67 +10,70 @@ def ConvertToHex(num):
 def ConvertToOct(num):
     return print(f"{int(num):o}")
 
-def ConvertCustom(num, base):
+def ConvertCustom(num, inputBase, outputBase):
+    if outputBase < 2:
+        return print("Error, invalid input\n")
+    num = int(num, inputBase) # Converting to base 10 before converting to inputted base
     if not num:
         return print(0)
     digits = []
     while num:
-        if num % base >= 10:
-            if num % base == 10:
+        if num % outputBase >= 10:
+            if num % outputBase == 10:
                 digits.append("a")
-            elif num % base == 11:
+            elif num % outputBase == 11:
                 digits.append("b")
-            elif num % base == 12:
+            elif num % outputBase == 12:
                 digits.append("c")
-            elif num % base == 13:
+            elif num % outputBase == 13:
                 digits.append("d")
-            elif num % base == 14:
+            elif num % outputBase == 14:
                 digits.append("e")
-            elif num % base == 15:
+            elif num % outputBase == 15:
                 digits.append("f")
-            elif num % base == 16:
+            elif num % outputBase == 16:
                 digits.append("g")
-            elif num % base == 17:
+            elif num % outputBase == 17:
                 digits.append("h")
-            elif num % base == 18:
+            elif num % outputBase == 18:
                 digits.append("i")
-            elif num % base == 19:
+            elif num % outputBase == 19:
                 digits.append("j")
-            elif num % base == 20:
+            elif num % outputBase == 20:
                 digits.append("k")
-            elif num % base == 21:
+            elif num % outputBase == 21:
                 digits.append("l")
-            elif num % base == 22:
+            elif num % outputBase == 22:
                 digits.append("m")
-            elif num % base == 23:
+            elif num % outputBase == 23:
                 digits.append("n")
-            elif num % base == 24:
+            elif num % outputBase == 24:
                 digits.append("o")
-            elif num % base == 25:
+            elif num % outputBase == 25:
                 digits.append("p")
-            elif num % base == 26:
+            elif num % outputBase == 26:
                 digits.append("q")
-            elif num % base == 27:
+            elif num % outputBase == 27:
                 digits.append("r")
-            elif num % base == 28:
+            elif num % outputBase == 28:
                 digits.append("s")
-            elif num % base == 29:
+            elif num % outputBase == 29:
                 digits.append("t")
-            elif num % base == 30:
+            elif num % outputBase == 30:
                 digits.append("u")
-            elif num % base == 31:
+            elif num % outputBase == 31:
                 digits.append("v")
-            elif num % base == 32:
+            elif num % outputBase == 32:
                 digits.append("w")
-            elif num % base == 33:
+            elif num % outputBase == 33:
                 digits.append("x")
-            elif num % base == 34:
+            elif num % outputBase == 34:
                 digits.append("y")
-            elif num % base == 35:
+            elif num % outputBase == 35:
                 digits.append("z")
         else:
-            digits.append(num % base)
-        num //= base
+            digits.append(num % outputBase)
+        num //= outputBase
     digits = list(reversed(digits))
     string = "".join(str(digit) for digit in digits) # Converts each element to string
     return print(string.upper())
@@ -82,18 +85,19 @@ while True:
             number = input("Enter number: ")
             base = int(input("Enter its base: "))
             ConvertToDenary(number, base)
-        if choice == 2:
+        elif choice == 2:
             number = input("Enter number: ")
             ConvertToBinary(number)
-        if choice == 3:
+        elif choice == 3:
             number = input("Enter number: ")
             ConvertToHex(number)
-        if choice == 4:
+        elif choice == 4:
             number = input("Enter number: ")
             ConvertToOct(number)
-        if choice == 5:
-            number = int(input("Enter number: "))
-            base = int(input("Enter base to convert into: "))
-            ConvertCustom(number, base)
+        elif choice == 5:
+            number = input("Enter number: ")
+            inputBase = int(input("Enter its base: "))
+            outputBase = int(input("Enter base to convert into: "))
+            ConvertCustom(number, inputBase, outputBase)
     except ValueError or UnboundLocalError:
         print("Error, invalid input\n")
