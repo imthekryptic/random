@@ -15,7 +15,61 @@ def ConvertCustom(num, base):
         return print(0)
     digits = []
     while num:
-        digits.append(num % base)
+        if num % base >= 10:
+            if num % base == 10:
+                digits.append("a")
+            elif num % base == 11:
+                digits.append("b")
+            elif num % base == 12:
+                digits.append("c")
+            elif num % base == 13:
+                digits.append("d")
+            elif num % base == 14:
+                digits.append("e")
+            elif num % base == 15:
+                digits.append("f")
+            elif num % base == 16:
+                digits.append("g")
+            elif num % base == 17:
+                digits.append("h")
+            elif num % base == 18:
+                digits.append("i")
+            elif num % base == 19:
+                digits.append("j")
+            elif num % base == 20:
+                digits.append("k")
+            elif num % base == 21:
+                digits.append("l")
+            elif num % base == 22:
+                digits.append("m")
+            elif num % base == 23:
+                digits.append("n")
+            elif num % base == 24:
+                digits.append("o")
+            elif num % base == 25:
+                digits.append("p")
+            elif num % base == 26:
+                digits.append("q")
+            elif num % base == 27:
+                digits.append("r")
+            elif num % base == 28:
+                digits.append("s")
+            elif num % base == 29:
+                digits.append("t")
+            elif num % base == 30:
+                digits.append("u")
+            elif num % base == 31:
+                digits.append("v")
+            elif num % base == 32:
+                digits.append("w")
+            elif num % base == 33:
+                digits.append("x")
+            elif num % base == 34:
+                digits.append("y")
+            elif num % base == 35:
+                digits.append("z")
+        else:
+            digits.append(num % base)
         num //= base
     digits = list(reversed(digits))
     print(*digits, sep="")
@@ -42,7 +96,7 @@ while True:
         if choice == 5:
             try:
                 number = int(input("Enter number: "))
-                base = int(input("Enter its base: "))
+                base = int(input("Enter base to convert into: "))
             except ValueError and UnboundLocalError:
                 print("Error, invalid input\n")
             ConvertCustom(number, base)
