@@ -80,7 +80,7 @@ def ConvertCustom(num, inputBase, outputBase):
     digits = list(reversed(digits))
     string = "".join(str(digit) for digit in digits) # Converts each element to string
     if negative:
-        return print("-"+string.upper())
+        return print("-" + string.upper())
     else:
         return print(string.upper())
 
