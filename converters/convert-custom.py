@@ -1,14 +1,14 @@
 def ConvertToDenary(num, base):
     return print(int(num, base))  
 
-def ConvertToBinary(num):
-    return print(f"{int(num):b}")
+def ConvertToBinary(num, base):
+    return print(f"{int(num, base):b}")
 
-def ConvertToHex(num):
-    return print(f"{int(num):x}".upper())
+def ConvertToHex(num, base):
+    return print(f"{int(num, base):x}".upper())
 
-def ConvertToOct(num):
-    return print(f"{int(num):o}")
+def ConvertToOct(num, base):
+    return print(f"{int(num, base):o}")
 
 def ConvertCustom(num, inputBase, outputBase):
     if outputBase < 2:
@@ -93,13 +93,16 @@ while True:
             ConvertToDenary(number, base)
         elif choice == 2:
             number = input("Enter number: ")
-            ConvertToBinary(number)
+            base = int(input("Enter its base: "))
+            ConvertToBinary(number, base)
         elif choice == 3:
             number = input("Enter number: ")
-            ConvertToHex(number)
+            base = int(input("Enter its base: "))
+            ConvertToHex(number, base)
         elif choice == 4:
             number = input("Enter number: ")
-            ConvertToOct(number)
+            base = int(input("Enter its base: "))
+            ConvertToOct(number, base)
         elif choice == 5:
             number = input("Enter number: ")
             inputBase = int(input("Enter its base: "))
