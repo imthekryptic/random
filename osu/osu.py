@@ -758,7 +758,7 @@ def color_rgb(r,g,b):
 ##############################################################################
 # Code above is not mine
 
-win = GraphWin("Circles", 500, 500)
+win = GraphWin("osu!python", 500, 500)
 win.setBackground("black")
 counter = 1
 while True:
