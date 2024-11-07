@@ -756,6 +756,7 @@ def color_rgb(r,g,b):
     return "#%02x%02x%02x" % (r,g,b)
 
 ##############################################################################
+# Code above is not mine
 
 win = GraphWin("Circles", 500, 500)
 win.setBackground("black")
