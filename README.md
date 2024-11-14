@@ -1,1 +1,1 @@
-random projects, mostly things I do in class or related to my lessons
+Random projects that I do in class or related to my lessons. These are all extracurricular
