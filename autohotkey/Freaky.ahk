@@ -1,6 +1,10 @@
-SetStoreCapslockMode off
+#NoEnv ; Recommended for performance and compatibility with future AutoHotkey releases
 #MaxHotkeysPerInterval, 999
 #Requires AutoHotkey v1.1
+
+GroupAdd, Exclusions, ahk_exe chrome.exe ; Bugfix with chrome input fields (add other windows if they also have issues)
+
+SetStoreCapslockMode off
 
 ~+^!z::reload ;Alt-Shift-Ctrl-Z: Reload AHK script
 
@@ -19,7 +23,7 @@ return
 
 a::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {a down}{BackSpace}
 	}
@@ -57,7 +61,7 @@ return
 
 b::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {b down}{BackSpace}
 	}
@@ -95,7 +99,7 @@ return
 
 c::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {c down}{BackSpace}
 	}
@@ -133,7 +137,7 @@ return
 
 d::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {d down}{BackSpace}
 	}
@@ -171,7 +175,7 @@ return
 
 e::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {e down}{BackSpace}
 	}
@@ -209,7 +213,7 @@ return
 
 f::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {f down}{BackSpace}
 	}
@@ -247,7 +251,7 @@ return
 
 g::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {g down}{BackSpace}
 	}
@@ -285,7 +289,7 @@ return
 
 h::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {h down}{BackSpace}
 	}
@@ -323,7 +327,7 @@ return
 
 i::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {i down}{BackSpace}
 	}
@@ -361,7 +365,7 @@ return
 
 j::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {j down}{BackSpace}
 	}
@@ -399,7 +403,7 @@ return
 
 k::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {k down}{BackSpace}
 	}
@@ -437,7 +441,7 @@ return
 
 l::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {l down}{BackSpace}
 	}
@@ -475,7 +479,7 @@ return
 
 m::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {m down}{BackSpace}
 	}
@@ -513,7 +517,7 @@ return
 
 n::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {n down}{BackSpace}
 	}
@@ -551,7 +555,7 @@ return
 
 o::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {o down}{BackSpace}
 	}
@@ -589,7 +593,7 @@ return
 
 p::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {p down}{BackSpace}
 	}
@@ -627,7 +631,7 @@ return
 
 q::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {q down}{BackSpace}
 	}
@@ -665,7 +669,7 @@ return
 
 r::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {r down}{BackSpace}
 	}
@@ -703,7 +707,7 @@ return
 
 s::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {s down}{BackSpace}
 	}
@@ -741,7 +745,7 @@ return
 
 t::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {t down}{BackSpace}
 	}
@@ -779,7 +783,7 @@ return
 
 u::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {u down}{BackSpace}
 	}
@@ -817,7 +821,7 @@ return
 
 v::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {v down}{BackSpace}
 	}
@@ -855,7 +859,7 @@ return
 
 w::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {w down}{BackSpace}
 	}
@@ -893,7 +897,7 @@ return
 
 x::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {x down}{BackSpace}
 	}
@@ -931,7 +935,7 @@ return
 
 y::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {y down}{BackSpace}
 	}
@@ -969,7 +973,7 @@ return
 
 z::
 if (toggle) {
-	IfWinActive ahk_exe chrome.exe ; Bugfix with chrome input fields (add other IfWinActive directives with other Send types if other windows have issues)
+	IfWinActive ahk_group Exclusions
 	{
 		SendPlay {z down}{BackSpace}
 	}
