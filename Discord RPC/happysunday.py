@@ -7,7 +7,7 @@ RPC = Presence(client_id)
 RPC.connect()
 
 while True:
-    days_ahead = 6 - datetime.datetime.now().weekday()  # 6 is Sunday
+    days_ahead = 6 - datetime.datetime.now().weekday() # 6 is Sunday
     if days_ahead < 0:
         days_ahead += 7
 
